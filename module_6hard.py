@@ -62,12 +62,12 @@ class Circle(Figure):
         return math.pi*(self.__radius**2)
     def get_radius(self):
         return self.__radius
-    # def set_radius(self):
-    #     if radius > 0:
-    #         self.__radius = radius
-    #         self.set_sides(radius)
-    #     else:
-    #         raise ValueError("Радиус должен быть положительным.")
+    def set_radius(self):
+        if radius > 0:
+            self.__radius = radius
+            self.set_sides(radius)
+        else:
+            raise ValueError("Радиус должен быть положительным.")
 
 class Triangle(Figure):
     sides_count = 3
@@ -96,12 +96,12 @@ class Cube(Figure):
     def get_length(self):
         return self.__length
 
-    # def set_length(self):
-    #     if length > 0:
-    #         self.__length = length
-    #         self.set_sides(length)
-    #     else:
-    #         raise ValueError("Длина ребра должна быть положительным.")
+    def set_length(self):
+        if length > 0:
+            self.__length = length
+            self.set_sides(length)
+        else:
+            raise ValueError("Длина ребра должна быть положительным.")
 
 
 
