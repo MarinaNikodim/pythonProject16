@@ -11,15 +11,17 @@ class Animal:
         if isinstance(food, Plant) and food.edible:
             self.food = food.name
             self.fed = True
+            #Fruit.edible = True
             print(f' {self.name} съел {food.name}')
 
         else:
+            #Flower.edible = False
             print(f' {self.name} не стал есть {food.name}')
             self.alive = False
 
 
 class Plant:
-    def __init__(self, name, edible=False):
+    def __init__(self, name, edible = False):
         self.name = name
         self.edible = edible
 
@@ -33,11 +35,13 @@ class Predator(Animal):
 
 
 class Flower(Plant):
+    #edible = False
     def __init__(self, name):
         super().__init__(name, edible=False)
 
 
 class Fruit(Plant):
+    #edible = True
     def __init__(self, name):
         super().__init__(name, edible=True)
 
